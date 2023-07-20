@@ -137,3 +137,19 @@ body {
   top: 748px;
   color: white; 
 }
+
+/* Contact Styles */
+.contact {
+  border: 1px solid black;
+  height: 250px;
+  width: 100%;
+  background-color: grey;
+}
+
+.contact h2 {
+  color:white;
+}
+
+.contact p {
+  color:white;
+}
