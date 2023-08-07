@@ -75,7 +75,7 @@ body {
 .video_image{
   display: flex;
   position:absolute;
-  left: 954px;
+  left: 877px;
   top: 261px;
   height: 150px;
   width: 300px;
@@ -164,8 +164,6 @@ body {
 
 form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .form-group {
@@ -179,10 +177,16 @@ label {
 }
 
 input[type="text"],
-textarea {
-  width: 400%;
-}
+/* textarea {
+  width: 50%;
+} */
 
 button[type="submit"] {
-  margin-top: 20px;
+  margin-top: 1%;
+}
+.about-me{
+  border: 1px solid black;
+  height: 250px;
+  width: 100%;
+  background-color: grey;
 }
