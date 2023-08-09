@@ -165,7 +165,7 @@ body {
 form {
   display: flex;
 }
-
+ 
 .form-group {
   flex-basis: calc(50% - 10px); /* Adjust this value to set the desired width */
   margin-bottom: 20px;
