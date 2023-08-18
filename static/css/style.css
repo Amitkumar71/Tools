@@ -28,57 +28,57 @@ body {
   border: 1px solid black;
 }
 .image_text{
-    font-size: 30px;
-    font-weight: bold;
-    display: flex;
-    position:absolute;
-    left: 425px;
-    top: 52px;
-    color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  position: absolute;
+  left: 35%;
+  top: 52px;
+  color: black;
 }
 .image_info{
-    font-size: 20px;
-    display: flex;
-    position:absolute;
-    left: 424px;
-    top: 95px;
-    width: 716px;
-    color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  left: 35%;
+  top: 14%;
+  width: 65%;
+  color: white;
 }
 .image_image{
-    display: flex;
-    position:absolute;
-    left: 61px;
-    top: 66px;
-    height: 150px;
-    width: 300px;
-    border-radius: 20px;
+  display: flex;
+  position: absolute;
+  left: 1%;
+  top: 7%;
+  height: 150px;
+  width: 300px;
+  border-radius: 20px;
 }
 .video_text{
   font-size: 30px;
   font-weight: bold;
   display: flex;
   position:absolute;
-  left: 106px;
+  left: 3%;
   top: 240px;
-  color: white;
+  color: black;
 }
 .video_info{
-  width: 801px;
+  width: 65%;
   font-size: 20px;
-  display: flex; 
-  position:absolute;
-  left: 68px;
+  display: flex;
+  position: absolute;
+  left: 3%;
   top: 300px;
   color: white;
 }
 .video_image{
   display: flex;
-  position:absolute;
-  left: 877px;
+  position: absolute;
   top: 261px;
   height: 150px;
   width: 300px;
+  right: 1%;
   border-radius: 20px;
 }
 .ai_text{
@@ -86,23 +86,23 @@ body {
   font-weight: bold;
   display: flex;
   position:absolute;
-  left: 425px;
+  left: 35%;
   top: 467px;
-  color: white; 
+  color: black; 
 }
 .ai_info{
-    font-size: 20px;
-    display: flex;
-    position:absolute;
-    left: 424px;
-    top: 515px;
-    width: 716px;
-    color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  left: 35%;
+  top: 515px;
+  width: 65%;
+  color: white;
 }
 .ai_image{
   display: flex;
   position:absolute;
-  left: 61px;
+  left: 1%;
   top: 476px;
   height: 150px;
   width: 300px;
@@ -120,23 +120,7 @@ body {
   right : 50px;
   height: 217px;
 }
-/* .map.div{
-  font-size: 30px;
-  font-weight: bold;
-  display: flex;
-  position:absolute;
-  left: 106px;
-  top: 700px;
-  color: white;
-} */
-/* .map.div.h3{ */
-  /* font-size: 20px;
-  display: flex;
-  position:absolute;
-  left: 110px;
-  top: 748px;
-  color: white;  */
-/* } */
+
 .map div{
   font-size: 20px;
   font-weight: bold;
@@ -146,7 +130,6 @@ body {
   color: white;
 }
 
-/* Contact Styles */
 .contact {
   border: 1px solid black;
   height: 250px;
@@ -167,7 +150,7 @@ form {
 }
  
 .form-group {
-  flex-basis: calc(50% - 10px); /* Adjust this value to set the desired width */
+  flex-basis: calc(50% - 10px); 
   margin-bottom: 20px;
 }
 
