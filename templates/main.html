@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Online Support</title>
+  <title>Tools</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
@@ -19,7 +19,7 @@
       that are useful in both their personal and professional lives. The website provides high-quality services for
       authors, publishers, and other businesses, ensuring that they have access to the necessary tools to succeed.
     </p>
-    <button>
+    <button id="scrollButton">
       CONTACT US
     </button>
   </div>
@@ -60,16 +60,68 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56062.0728988746!2d77.00389545094887!3d28.573379257156272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1a9c31eec4e1%3A0x39493976cba4c89a!2sDwarka%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1687195658148!5m2!1sen!2sin"
       width="500" height="250" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
-  <div class="about-me">
-    <h2>About Me</h2>
-    <p>Hello! I am the creator of this website. My passion for technology and creativity inspired me to build this
-      platform for providing online support and resources in various domains. I hope you find the information here
-      helpful and valuable. Feel free to connect with me and share your suggestions!</p>
-  </div>
-  </div>
-</body>
 
+  <div class="contact-container">
+    <div class="contact-info">
+      <h1>Contact Us</h1>
+      <p>Fill out the form below, and we will get back to you shortly.</p>
+    </div>
+    <div class="contact-form">
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter Your Email ">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="about-me">
+    <h2>About Us</h2>
+    <p>We are a team dedicated to solving your problems and making your life and work easier. Our website provides a
+      vast array of resources to enhance your creativity and productivity. We have curated a list of top-notch
+      references to other image editing video editing and Al websites that can help you take your projects to the next
+      level. These websites include industry-leading tools and software, as well as informative blogs and tutorials that
+      cover everything from the basics to advanced techniques. Whether you're a beginner or a professional, our mission
+      in to Inspire and equip you with the knowledge and tools needed to create stunning visual content. We are
+      committed to being a valuable resource for you and helping you achieve your goals.!</p>
+  </div>
+
+  <div class="footer">
+    <div class="left-section">
+      <span class="nav-item">TOOLS</span>
+    </div>
+    <div class="right-section">
+      <a href="https://github.com" target="_blank" class="nav-item">0
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="nav-item">0
+      </a>
+      <a href="https://instagram.com" target="_blank" class="nav-item">0
+      </a>
+    </div>
+  </div>
+  </div>
 </html>
+
+<script>
+  // Get a reference to the button and the second div
+const scrollButton = document.getElementById("scrollButton");
+const div2 = document.querySelector(".contact-form");
+
+// Add a click event listener to the button
+scrollButton.addEventListener("click", () => {
+    // Use the `scrollIntoView` method to scroll to the second div smoothly
+    div2.scrollIntoView({ behavior: "smooth" });
+});
+
+</script>
+
 </body>
 
 </html>
