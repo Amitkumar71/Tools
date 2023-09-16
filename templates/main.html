@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <head>
   <title>Tools</title>
@@ -107,20 +106,41 @@
     </div>
   </div>
   </div>
-</html>
 
-<script>
-  // Get a reference to the button and the second div
-const scrollButton = document.getElementById("scrollButton");
-const div2 = document.querySelector(".contact-form");
+  {% if suggestion_recorded %}
+  <div id="popup" style="display: block;">
+    Your Suggestion has been recorded
+  </div>
+  {% endif %}
+  <script>
+    // Get a reference to the button and the second div
+    const scrollButton = document.getElementById("scrollButton");
+    const div2 = document.querySelector(".contact-form");
 
-// Add a click event listener to the button
-scrollButton.addEventListener("click", () => {
-    // Use the `scrollIntoView` method to scroll to the second div smoothly
-    div2.scrollIntoView({ behavior: "smooth" });
-});
+    // Add a click event listener to the button
+    scrollButton.addEventListener("click", () => {
+      // Use the `scrollIntoView` method to scroll to the second div smoothly
+      div2.scrollIntoView({ behavior: "smooth" });
+    });
 
-</script>
+
+    // Function to show the popup
+    function showPopup() {
+      var popup = document.getElementById("popup");
+      if (popup) {
+        popup.style.display = "block"; // Show the popup
+        setTimeout(function () {
+          popup.style.display = "none"; // Hide the popup after 3 seconds
+        }, 3000);
+      }
+    }
+
+    // Add an event listener to run the function when the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      showPopup();
+    });
+
+  </script>
 
 </body>
 
