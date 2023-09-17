@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv  
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 
 # Configure the MySQL database connection
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:Amit71.@localhost/suggestions'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
 db = SQLAlchemy(app)
 
 # Define a model for your data
