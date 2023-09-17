@@ -107,11 +107,6 @@
   </div>
   </div>
 
-  {% if suggestion_recorded %}
-  <div id="popup" style="display: block;">
-    Your Suggestion has been recorded
-  </div>
-  {% endif %}
   <script>
     // Get a reference to the button and the second div
     const scrollButton = document.getElementById("scrollButton");
@@ -121,23 +116,6 @@
     scrollButton.addEventListener("click", () => {
       // Use the `scrollIntoView` method to scroll to the second div smoothly
       div2.scrollIntoView({ behavior: "smooth" });
-    });
-
-
-    // Function to show the popup
-    function showPopup() {
-      var popup = document.getElementById("popup");
-      if (popup) {
-        popup.style.display = "block"; // Show the popup
-        setTimeout(function () {
-          popup.style.display = "none"; // Hide the popup after 3 seconds
-        }, 3000);
-      }
-    }
-
-    // Add an event listener to run the function when the DOM is fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-      showPopup();
     });
 
   </script>

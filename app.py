@@ -17,8 +17,7 @@ class SiteSuggestion(db.Model):
 
 @app.route('/')
 def home():
-    suggestion_recorded = request.args.get('suggestion_recorded')
-    return render_template('main.html', suggestion_recorded=suggestion_recorded)
+    return render_template('main.html')
 
 
 @app.route('/suggest', methods=['GET', 'POST'])
@@ -34,9 +33,13 @@ def suggest():
         db.session.add(suggestion)
         db.session.commit()
 
-        return redirect(url_for('home', suggestion_recorded=True))  # Redirect to the home page with a message
+        return redirect(url_for('thanks'))
 
     return render_template('Suggest.html')
+
+@app.route('/thanks')
+def thanks():
+    return render_template('Thanks.html')
 
 if __name__ == '__main__':
     with app.app_context():

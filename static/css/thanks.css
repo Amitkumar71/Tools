@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:grey; 
+}
+
+.message-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.another-btn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color:orange;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+.another-btn a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+@media (max-width: 600px) {
+    .message-box {
+        max-width: 90%;
+    }
+}
