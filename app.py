@@ -41,6 +41,10 @@ def suggest():
 
     return render_template('Suggest.html')
 
+@app.route('/images')
+def images():
+    return render_template('Images.html')
+
 @app.route('/thanks')
 def thanks():
     return render_template('Thanks.html')
