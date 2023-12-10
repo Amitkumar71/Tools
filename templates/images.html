@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>image Editing sites</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/images.css') }}">
 </head>
+
 <body>
     <nav id="nav">
         {% include 'Navbar.html' %}
-        <!-- <div id="logo">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"> 
-            <p>Tools</p>
-        </div>
-
-        <div id="right-section">
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('suggest') }}">Suggest</a>
-            <a href="#">Connect</a>
-        </div> -->
     </nav>
+    <div id="card-container">
+        <div id="card">
+            <img src="{{ url_for('static', filename='images/Top.jpg') }}" alt="Canva">
+            <h3>Vercel</h3>
+            <p>Vercel is a platform to host static websites with zero cost</p>
+            <button id="btn">Visit</button>
+        </div>
+        <div id="card">
+            <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="Canva">
+            <h3>Vectorizer.ai</h3>
+            <p>A freely available site to convert image from pixel to vectors.</p>
+            <button id="btn">Visit</button>
+        </div>
+    </div>
 </body>
 </html>
