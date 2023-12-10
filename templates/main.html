@@ -6,11 +6,9 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <ul>
-      <li><a href="{{ url_for('suggest') }}">Suggest</a></li>
-      <li><a href="{{ url_for('images')}}">Connect</a></li>
-    </ul>
+  {% include "Navbar.html" %}
+  <div class="nav">
+    <!-- {% include "Navbar.html" %} -->
   </div>
   <div class="top">
     <p>

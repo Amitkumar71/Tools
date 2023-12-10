@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suggestions</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Suggest.css') }}">
 </head>
+
 <body>
     <div class="container">
+        {% include 'Navbar.html' %}
         <h1>Give your Suggestions</h1>
         <form action="/suggest" method="post">
             <label for="name">Name:</label>
@@ -20,10 +23,12 @@
             <input type="text" id="site" name="site" required placeholder="Site You Want to Suggest">
 
             <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="4" required placeholder="Short Description about the site you want to suggest"></textarea>
+            <textarea id="description" name="description" rows="4" required
+                placeholder="Short Description about the site you want to suggest"></textarea>
 
             <input type="submit" value="Send">
-        </form>        
+        </form>
     </div>
 </body>
+
 </html>
