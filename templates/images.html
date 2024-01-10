@@ -13,18 +13,14 @@
         {% include 'Navbar.html' %}
     </nav>
     <div id="card-container">
+        {% for suggestion in data %}
         <div id="card">
-            <img src="{{ url_for('static', filename='images/Top.jpg') }}" alt="Canva">
-            <h3>Vercel</h3>
-            <p>Vercel is a platform to host static websites with zero cost</p>
+            <img src="{{ suggestion.image_path }}"></img>
+            <h3>{{ suggestion.site }}</h3>
+            <p>{{ suggestion.description}}</p>
             <button id="btn">Visit</button>
         </div>
-        <div id="card">
-            <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="Canva">
-            <h3>Vectorizer.ai</h3>
-            <p>A freely available site to convert image from pixel to vectors.</p>
-            <button id="btn">Visit</button>
-        </div>
+        {% endfor %}
     </div>
 </body>
 
