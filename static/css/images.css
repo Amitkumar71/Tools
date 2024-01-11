@@ -1,17 +1,24 @@
-body{
-    background-color: rgb(255, 255, 255);
-}
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Libre+Franklin:wght@300&family=Rajdhani:wght@300;600&family=Tangerine&family=Work+Sans&display=swap');
+
+#main{
+    margin: 0;
+    background: 
+      radial-gradient(circle at 50% 20px, #0000ff, #ff0000),
+      #000; 
+    background-size: contain;
+    color:white
+  }
+  
 
 #card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
 }
 
 #card {
-    width: 300px;
+    width: 30%;
     margin: 20px;
     height: max-content;
     padding: 30px;
@@ -52,4 +59,44 @@ body{
 }
 #btn:hover {
     background-color: #2980b9;
+}
+
+#top{
+    font-family: Work Sans;
+    margin: 0rem 0 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#top h1{
+    margin: 2rem 0 0 0;
+}
+
+#middle{
+    font-family: Work Sans;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#middle h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+#block{
+    display: flex;
+    width: 10%;
+    height: 10px;
+    background-color:white;
+    margin: 1rem 0 0 45%;
+}
+
+#line{
+    width: 60%;
+    height: 1px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 20%;
 }

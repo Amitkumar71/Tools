@@ -12,15 +12,27 @@
     <nav id="nav">
         {% include 'Navbar.html' %}
     </nav>
-    <div id="card-container">
-        {% for suggestion in data %}
-        <div id="card">
-            <img src="{{ suggestion.image_path }}"></img>
-            <h3>{{ suggestion.site }}</h3>
-            <p>{{ suggestion.description}}</p>
-            <button id="btn">Visit</button>
+    <div id="main">
+        <div id="top">
+            <h1>IMAGE EDITING</h1>
+            <p>WEBSITE THAT ALLOWS YOU TO EDIT YOUR IMAGES WITH EASE</p>
         </div>
-        {% endfor %}
+        <div id="middle">
+            <h3>IMAGE EDITING TOOLS
+            </h3>
+            <div id="block"></div>
+            <div id="line"></div>
+        </div>
+        <div id="card-container">
+            {% for suggestion in data %}
+            <div id="card">
+                <img src="{{ suggestion.image_path }}"></img>
+                <h3>{{ suggestion.site }}</h3>
+                <p>{{ suggestion.description}}</p>
+                <button id="btn">Visit</button>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 
