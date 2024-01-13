@@ -13,18 +13,26 @@
         {% include 'Navbar.html' %}
         <h1>Give your Suggestions</h1>
         <form action="/suggest" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
-
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required placeholder="Your Email">
 
-            <label for="site">Site:</label>
+            <label for="type">Type of Website:</label>
+            <select id="type" name="type">
+                <option value="image">Image Editing</option>
+                <option value="video">Video Editing</option>
+                <option value="AI">AI Tool</option>
+            </select>
+
+            <label for="site">Site Name:</label>
             <input type="text" id="site" name="site" required placeholder="Site You Want to Suggest">
+
+            <label for="link">Link:</label>
+            <input type="url" id="link" name="link" required placeholder="Link of the site you want to suggest">
 
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" required
                 placeholder="Short Description about the site you want to suggest"></textarea>
+
             <label for="image_path">Image of the site:</label>
             <input type="file" id="image_path" name="image_path" accept="image/*">
             <input type="submit" value="Send">

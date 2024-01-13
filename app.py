@@ -13,16 +13,21 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-# Define a model for your data
+# Database Model
 class SiteSuggestion(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), nullable=False)
     site = db.Column(db.String(200), nullable=False)
+    type=db.Column(db.String(50),nullable=False)
+    link=db.Column(db.String(200))
     description = db.Column(db.Text, nullable=False)
-    image_path = db.Column(db.String(255))  # Adjust the length based on your needs
+    image_path = db.Column(db.String(255))
+
+    def __str__(self) -> str:
+        return f'{self.email} - {self.site} - {self.type} - {self.link} - {self.description} - {self.image_path}'
 
 @app.route('/')
+
 def home():
     return render_template('main.html')
 
@@ -30,14 +35,15 @@ def home():
 @app.route('/suggest', methods=['GET', 'POST'])
 def suggest():
     if request.method == 'POST':
-        name = request.form['name']
         email = request.form['email']
         site = request.form['site']
         description = request.form['description']
+        type=request.form['type']
+        link=request.form['link']
         image_path = request.form['image_path']
 
-        # Create a new SiteSuggestion object and add it to the database
-        suggestion = SiteSuggestion(name=name, email=email, site=site, description=description, image_path=image_path)
+        # Creates a new SiteSuggestion object and add it to the database
+        suggestion = SiteSuggestion(type=type, email=email, site=site, description=description, image_path=image_path,link=link)
         db.session.add(suggestion)
         db.session.commit()
 
@@ -46,8 +52,10 @@ def suggest():
     return render_template('Suggest.html')
 
 @app.route('/images')
-def images():
-    data=SiteSuggestion.query.all()
+def image():
+    data=SiteSuggestion.query.filter(SiteSuggestion.type=="image").all()
+    print(data[2])
+
     return render_template('Images.html',data=data)
 
 @app.route('/thanks')
@@ -56,6 +64,10 @@ def thanks():
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()  # Create sql tables for our data models
+        db.create_all()  
     app.run(debug=True)
 
+@app.route('/video')
+def video():
+    data=SiteSuggestion.query.filter(SiteSuggestion.type =='video').all()
+    return render_template('Video.html',data=data)

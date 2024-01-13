@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image Editing sites</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/images.css') }}">
+</head>
+
+<body>
+    <nav id="nav">
+        {% include 'Navbar.html' %}
+    </nav>
+    <div id="main">
+        <div id="top">
+            <h1>VIDEO EDITING</h1>
+            <p>WEBSITE TO OUR CURATED COLLECTION OF FREE VIDEO EDITING TOOLS!</p>
+        </div>
+        <div id="middle">
+            <h3>VIDEO EDITING TOOLS
+            </h3>
+            <div id="block"></div>
+            <div id="line"></div>
+        </div>
+        <div id="card-container">
+            {% for suggestion in data %}
+            <div id="card">
+                <img src="{{ suggestion.image_path }}"></img>
+                <h3>{{ suggestion.site }}</h3>
+                <p>{{ suggestion.description}}</p>
+                <button id="btn" href="{{ suggestion.link }}">Visit</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

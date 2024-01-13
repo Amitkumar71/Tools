@@ -18,12 +18,12 @@
 }
 
 #card {
-    width: 30%;
+    width: 25%;
     margin: 20px;
     height: max-content;
     padding: 30px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     color: grey;
     text-align: center;
     background-color: rgb(249, 236, 255);
