@@ -76,3 +76,7 @@ def video():
 def ai():
     data=SiteSuggestion.query.filter(SiteSuggestion.type =='ai').all()
     return render_template('AI.html',data=data)
+
+@app.route('/test')
+def test():
+    return render_template('test.html')

@@ -18,7 +18,7 @@
             <p>THIS PARTICULAR SECTION IS DEDICATED SOLELY TO THE REMARKABLE WORLD OF ARTIFICIAL INTELLIGENCE!</p>
         </div>
         <div id="middle">
-            <h3>AI TOOLS
+            <h3>AI TOOLS {% include "test.html" %}
             </h3>
             <div id="block"></div>
             <div id="line"></div>
@@ -29,7 +29,7 @@
                 <img src="{{ suggestion.image_path }}"></img>
                 <h3>{{ suggestion.site }}</h3>
                 <p>{{ suggestion.description}}</p>
-                <button id="btn" href="{{ suggestion.link }}">Visit</button>
+                <a id="btn" href="{{ suggestion.link }}" target="_blank">Visit</a>
             </div>
             {% endfor %}
         </div>

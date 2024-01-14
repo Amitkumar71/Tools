@@ -29,7 +29,7 @@
                 <img src="{{ suggestion.image_path }}"></img>
                 <h3>{{ suggestion.site }}</h3>
                 <p>{{ suggestion.description}}</p>
-                <button id="btn">Visit</button>
+                <a id="btn" href="{{ suggestion.link }}" target="_blank">Visit</a>
             </div>
             {% endfor %}
         </div>
