@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>video Editing sites</title>
+    <title>Online ai tools</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/images.css') }}">
 </head>
 
@@ -14,11 +14,11 @@
     </nav>
     <div id="main">
         <div id="top">
-            <h1>VIDEO EDITING</h1>
-            <p>WEBSITE TO OUR CURATED COLLECTION OF FREE VIDEO EDITING TOOLS!</p>
+            <h1>AI TOOLS</h1>
+            <p>THIS PARTICULAR SECTION IS DEDICATED SOLELY TO THE REMARKABLE WORLD OF ARTIFICIAL INTELLIGENCE!</p>
         </div>
         <div id="middle">
-            <h3>VIDEO EDITING TOOLS
+            <h3>AI TOOLS
             </h3>
             <div id="block"></div>
             <div id="line"></div>
@@ -29,7 +29,7 @@
                 <img src="{{ suggestion.image_path }}"></img>
                 <h3>{{ suggestion.site }}</h3>
                 <p>{{ suggestion.description}}</p>
-                <a id="btn" href="{{ suggestion.link }}" target="_blank">Visit</a>
+                <button id="btn" href="{{ suggestion.link }}">Visit</button>
             </div>
             {% endfor %}
         </div>

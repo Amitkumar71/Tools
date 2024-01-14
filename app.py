@@ -71,3 +71,8 @@ if __name__ == '__main__':
 def video():
     data=SiteSuggestion.query.filter(SiteSuggestion.type =='video').all()
     return render_template('Video.html',data=data)
+
+@app.route('/ai')
+def ai():
+    data=SiteSuggestion.query.filter(SiteSuggestion.type =='ai').all()
+    return render_template('AI.html',data=data)
