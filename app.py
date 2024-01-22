@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv  
-from flask_migrate import Migrate
+# from flask_migrate import Migrate
 import os
 
 load_dotenv()
@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Configure the MySQL database connection
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+# migrate = Migrate(app, db)
 
 # Database Model
 class SiteSuggestion(db.Model):
