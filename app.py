@@ -65,7 +65,7 @@ def start_app():
     with app.app_context():
         db.create_all()  
     # app.run(debug=True)
-    # return app
+    return app
 
 @app.route('/video')
 def video():
