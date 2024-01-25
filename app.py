@@ -61,10 +61,11 @@ def image():
 def thanks():
     return render_template('Thanks.html')
 
-if __name__ == '__main__':
+def start_app():
     with app.app_context():
         db.create_all()  
-    app.run(debug=True)
+    # app.run(debug=True)
+    # return app
 
 @app.route('/video')
 def video():
