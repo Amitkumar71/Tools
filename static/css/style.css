@@ -199,16 +199,6 @@
   background-color: #0056b3;
 }
 
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(244, 230, 176);
-  color: black;
-  padding: 10px 20px;
-}
-
 .nav-item {
   margin-right: 10px;
   text-decoration: none;

@@ -79,18 +79,7 @@
     </div>
   </div>
 
-  <div class="about-me">
-    <h2>About Us</h2>
-    <p>We are a team dedicated to solving your problems and making your life and work easier. Our website provides a
-      vast array of resources to enhance your creativity and productivity. We have curated a list of top-notch
-      references to other image editing video editing and Al websites that can help you take your projects to the next
-      level. These websites include industry-leading tools and software, as well as informative blogs and tutorials that
-      cover everything from the basics to advanced techniques. Whether you're a beginner or a professional, our mission
-      in to Inspire and equip you with the knowledge and tools needed to create stunning visual content. We are
-      committed to being a valuable resource for you and helping you achieve your goals.!</p>
-  </div>
-
-  <div class="footer">
+  <!-- <div class="footer">
     <div class="left-section">
       <span class="nav-item">TOOLS</span>
     </div>
@@ -103,16 +92,15 @@
       </a>
     </div>
   </div>
-  </div>
+  </div> -->
+  <div>  {% include "footer.html" %}
+    </div>  
 
   <script>
-    // Get a reference to the button and the second div
     const scrollButton = document.getElementById("scrollButton");
     const div2 = document.querySelector(".contact-form");
 
-    // Add a click event listener to the button
     scrollButton.addEventListener("click", () => {
-      // Use the `scrollIntoView` method to scroll to the second div smoothly
       div2.scrollIntoView({ behavior: "smooth" });
     });
 
