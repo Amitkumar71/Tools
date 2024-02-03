@@ -1,27 +1,37 @@
 body {
     margin: 0;
     padding: 0;
+    /* background: linear-gradient(to bottom, #000000, #333333); */
 }
 
-.main-body{
+.main-body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom, #000000, #333333);
 }
 
 .main {
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
-    background: linear-gradient(to bottom, #000000, #333333);
     color: #ffffff;
     font-family: Arial, sans-serif;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
+}
+
+#s_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#s_content img{
+    margin-top: 5%;
 }
 
 h1 {
@@ -34,12 +44,20 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 40%;
     align-items: center;
 }
 
-label, input, textarea ,select{
-    margin-bottom: 15px;
+option {
+    background-color: grey;
+    font-weight: bold;
+}
+
+label,
+input,
+textarea,
+select {
+    margin-bottom: 10px;
     width: 100%;
     padding: 10px;
     border: none;
@@ -47,10 +65,6 @@ label, input, textarea ,select{
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     font-weight: bold;
-}
-
-select{
-    color:red;
 }
 
 label {
@@ -81,8 +95,12 @@ input[type="submit"]:hover {
     .main {
         width: 80%;
     }
+    #s_content #image{
+        display: none;
+    }
 
     form {
         max-width: none;
+        width: 80%;
     }
 }

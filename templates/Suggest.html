@@ -12,32 +12,37 @@
     {% include 'Navbar.html' %}
     <div class="main-body">
         <div class="main">
-            <h1>Suggest Your site here</h1>
-            <form action="/suggest" method="post">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Your Email">
+            <h1>Suggest Your site</h1>
+            <div id="s_content">
+                <div id="image">
+                    <img src="{{ url_for('static', filename='images/suggest.png') }}" alt="image">
+                </div>
+                <form action="/suggest" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
 
-                <label for="type">Type of Website:</label>
-                <select id="type" name="type">
-                    <option value="image">Image Editing</option>
-                    <option value="video">Video Editing</option>
-                    <option value="AI">AI Tool</option>
-                </select>
+                    <label for="type">Type of Website:</label>
+                    <select id="type" name="type">
+                        <option value="image">Image Editing</option>
+                        <option value="video">Video Editing</option>
+                        <option value="AI">AI Tool</option>
+                    </select>
 
-                <label for="site">Site Name:</label>
-                <input type="text" id="site" name="site" required placeholder="Site You Want to Suggest">
+                    <label for="site">Site Name:</label>
+                    <input type="text" id="site" name="site" required placeholder="Site You Want to Suggest">
 
-                <label for="link">Link:</label>
-                <input type="url" id="link" name="link" required placeholder="Link of the site you want to suggest">
+                    <label for="link">Link:</label>
+                    <input type="url" id="link" name="link" required placeholder="Link of the site you want to suggest">
 
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required
-                    placeholder="Short Description about the site you want to suggest"></textarea>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required
+                        placeholder="Short Description about the site you want to suggest"></textarea>
 
-                <label for="image_path">Image of the site:</label>
-                <input type="file" id="image_path" name="image_path" accept="image/*">
-                <input type="submit" value="Submit">
-            </form>
+                    <label for="image_path">Image of the site:</label>
+                    <input type="file" id="image_path" name="image_path" accept="image/*">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </div>
 </body>
